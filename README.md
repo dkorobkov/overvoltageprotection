@@ -1,6 +1,8 @@
 # overvoltageprotection
 Simple power supply overvoltage protection schematic<br>
+
 Простая схема защиты от перенапряжения на выходе источника питания<br>
+
 Use it to protect your devices from possible overvoltage due to power supply breakdown etc, or just improve reliability.<br>
 
 <image src="https://github.com/dkorobkov/overvoltageprotection/blob/master/vold_prot.png" width="50%"><br>
