@@ -7,8 +7,10 @@ Use it to protect your devices from possible overvoltage due to power supply bre
 
 <image src="https://github.com/dkorobkov/overvoltageprotection/blob/master/vold_prot.png" width="50%"><br>
  
-Voltage sensor here is TL431 (use Zener diode if TL431 is not available but performance will be poor). Its trip voltage can be adjusted by 4.7k + 1k voltage divider (TL431 opens when "R" voltage is above 2.5V). Opening TL431 will open p-n-p transistor (any small signal transistor will do, e.g. BC856)  that will force closing MOSFET (normally open with 1k resistor in gate circuit). 15V zener diode prevents gate overvoltage.
+Voltage sensor here is TL431 (use Zener diode if TL431 is not available but performance will be poor). Its trip voltage can be adjusted by 4.7k + 1k voltage divider (TL431 opens when "R" voltage is above 2.5V). Opening TL431 will open p-n-p transistor (any small signal transistor will do, e.g. BC856)  that will force closing MOSFET (normally open with 1k resistor in gate circuit).
 
-When overvoltage disappears output is connected back
+15V zener diode prevents gate overvoltage. It is not needed if protection trip voltage is set up below 15-17V because at higher input voltages transistor will open and tie gate to source.
 
-<font size="-1">This schematic is not ideal at voltages very (+-0.05V) close to TL431 trip voltage, as MOSFET will run in active mode with high power dissipation.</font>
+When overvoltage disappears output is connected back.
+
+This schematic is not ideal at voltages very (+-0.05V) close to TL431 trip voltage, as MOSFET will run in active mode with high power dissipation.
